@@ -1,6 +1,7 @@
 const dateText = document.getElementById("dateText");
 const recentAlarmsDates = document.querySelectorAll(".recentAlarmDate");
 const currentAlarmInfoArray = document.querySelectorAll(".currentAlarm .alarmInfo");
+const fabOptions = document.querySelectorAll(".fabOption");
 
 const date = new Date();
 const options = { weekday: 'long', month: 'short', day: 'numeric' };
@@ -18,5 +19,13 @@ recentAlarmsDates.forEach(element => {
 currentAlarmInfoArray.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = '/manage';
+    });
+});
+
+fabOptions.forEach(option => {
+    let optionName = option.textContent.trim().toLowerCase();
+    let firstWord = optionName.split(' ')[0];
+        option.addEventListener('click', () => {
+            window.location.href = `/${firstWord}`;
     });
 });

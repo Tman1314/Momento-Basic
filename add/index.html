@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Video Alarm - Add Alarm</title>
+    <link href="./add.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="alarmContainer">
+            <div id="header">
+                <button id="backBtn">&lt;</button>
+                <h1>Add Alarm</h1>
+            </div>
+            <hr>
+            <div id="body">
+                <div id="alarmInfo" class="container">
+                    <div id="alarmInfoContainer">
+                        <div id="alarmTitle">
+                            <h2>Alarm Title</h2>
+                            <input type="text" placeholder="Morning Alarm">
+                        </div>
+                        <div id="alarmDateTime">
+                            <h2>Alarm Date & Time</h2>
+                            <input type="datetime-local">
+                        </div>
+                        <div id="radio-group">
+                            <label for="repeatNone"><input type="radio" id="repeatNone" name="repeat" checked>Don't Repeat</label>
+                            <label for="repeatDaily"><input type="radio" id="repeatDaily" name="repeat">Daily</label>
+                            <label for="repeatWeekly"><input type="radio" id="repeatWeekly" name="repeat">Weekly</label>
+                            <label for="repeatMonthly"><input type="radio" id="repeatMonthly" name="repeat">Monthly</label>
+                            <label for="repeatCustom"><input type="radio" id="repeatCustom" name="repeat">Custom</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="alarmSenderInfo" class="container">
+                        <h2>Uploaded Momento</h2>
+                    <hr>
+                    <div id="senderInfo">
+                        <div id="senderProfilePic">
+                            ?
+                        </div>
+                        <div id="senderName">
+                            <p>Open Slot</p>
+                        </div>
+                    </div>
+                    <a href="#">Invite Someone</a>
+                    <div id="alarmAllowMomentoSetting">
+                        <div id="momentoSettingText">Alarm Allows Momentos</div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="alarmFallbackVideos" class="container">
+                    <div id="fallbackVideosHeader">
+                        <h2>Fallback Videos</h2>
+                        <p>One of these videos will play if you don't have a momento on your alarm.</p>
+                    </div>
+                    <hr>
+                    <div id="radio-group">
+                        <label for="receivedVideos"><input type="radio" id="receivedVideos" name="fallbackVideos" checked>Received Videos</label>
+                        <label for="yourVideos"><input type="radio" id="yourVideos" name="fallbackVideos">Your Videos</label>
+                        <label for="defaultVideos"><input type="radio" id="defaultVideos" name="fallbackVideos">Default Videos</label>
+                    </div>
+                    <div id="videoListContainer">
+                        <ul id="videoList">
+                            <li class="videoItem">
+                                <div class="videoDetails">
+                                    <p class="videoTitle">Morning Motivation</p>
+                                    <p class="videoSender">From: Mom</p>
+                                </div>
+                                <input type="checkbox">
+                            </li>
+                            <li class="videoItem">
+                                <div class="videoDetails">
+                                    <p class="videoTitle">Lunch Reminder</p>
+                                    <p class="videoSender">From: Alex Thompson</p>
+                                </div>
+                                <input type="checkbox">
+                            </li>
+                            <li class="videoItem">
+                                <div class="videoDetails">
+                                    <p class="videoTitle">Workout Time!</p>
+                                    <p class="videoSender">From: Jaime Wilson</p>
+                                </div>
+                                <input type="checkbox">
+                            </li>
+                            <li class="videoItem">
+                                <div class="videoDetails">
+                                    <p class="videoTitle">Clock Out</p>
+                                    <p class="videoSender">From: Ryan Martinez</p>
+                                </div>
+                                <input type="checkbox">
+                            </li>
+                            <li class="videoItem">
+                                <div class="videoDetails">
+                                    <p class="videoTitle">Bedtime</p>
+                                    <p class="videoSender">From: Katie Chen</p>
+                                </div>
+                                <input type="checkbox">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./add.js" defer></script>
+</body>
+
+</html>
