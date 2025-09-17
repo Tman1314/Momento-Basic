@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Video Alarm - Home</title>
+    <link href="./home.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="header">
+            <div id="userInfo">
+                <h3>Good Morning, Sarah!</h3>
+                <div id="dateSelector">
+                    <button class="calNavBtn">&lt;</button><span id="dateText">Wednesday, Sept. 17</span><button
+                        class="calNavBtn">&gt;</button>
+                </div>
+            </div>
+            <div class="profilePicContainer">
+                <img class="userProfilePic" src="../media/profile-pics/sarah_profile_pic.jpg"
+                    alt="User Profile Picture" />
+            </div>
+        </div>
+        <div id="content">
+            <div class="title">
+                <h2>My Alarms</h2>
+            </div>
+            <div id="currentAlarmsList" class="alarmsList">
+                <div class="alarm currentAlarm">
+                    <div class="alarmInfo">
+                        <h3>07:00 AM</h3>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Morning Motivation</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Mom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alarmActions">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="alarm currentAlarm">
+                    <div class="alarmInfo">
+                        <h3>12:00 PM</h3>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Lunch Reminder</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/alex_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Alex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alarmActions">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="alarm currentAlarm">
+                    <div class="alarmInfo">
+                        <h3>06:00 PM</h3>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Workout Time!</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/jaime_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Jaime</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alarmActions">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Recent Alarms</h2>
+            </div>
+            <div id="recentAlarmsList" class="alarmsList">
+                <div class="alarm recentAlarm">
+                    <div class="alarmInfo">
+                        <div class="alarmDate">
+                            <h3 class="recentAlarmDate">09/16/2025</h3>
+                            <h3>07:00 AM</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Morning Motivation</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Mom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alarm recentAlarm">
+                    <div class="alarmInfo">
+                        <div class="alarmDate">
+                            <h3 class="recentAlarmDate">09/15/2025</h3>
+                            <h3>07:00 AM</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Morning Motivation</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Mom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alarm recentAlarm">
+                    <div class="alarmInfo">
+                        <div class="alarmDate">
+                            <h3 class="recentAlarmDate">09/14/2025</h3>
+                            <h3>07:00 AM</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="alarmDetails">
+                            <p>Morning Motivation</p>
+                            <div class="userDetails">
+                                <p>From:</p>
+                                <div class="alarmProfilePicContainer">
+                                    <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg"
+                                        alt="User Picture" />
+                                </div>
+                                <p>Mom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fab">
+                <label for="fabToggle" id="fabToggleLabel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="fabToggle" class="fabToggle hidden" />
+                <div id="fabOptions">
+                    <div class="fabOption">Add Alarm</div>
+                    <div class="fabOption">Send Alarm</div>
+                    <div class="fabOption">Settings</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrim"></div>
+    <script src="./home.js" defer></script>
+</body>
+
+</html>

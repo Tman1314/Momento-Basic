@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Video Alarm</title>
+    <link href="styles/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="top">
+            <img src="./media/Icon_Transparent.png" alt="Momento Logo" class="logo">
+            <h1>Momento Video Alarm</h1>
+            <p>Wake up, to what matters most.</p>
+        </div>
+        <div id="loginContainer">
+            <form action="" method="POST" id="loginForm">
+                <input id="email" type="email" name="email" placeholder="Email" required>
+                <button id="magicLinkBtn" class="glassBtn" type="submit">Send Magic Link</button>
+            </form>
+            <div id="thirdPartyLogin">
+                <p>Or login using</p>
+                <div id="thirdPartyBtns">
+                    <button id="googleBtn" class="glassBtn thirdPartyBtn">Google</button>
+                    <button id="appleBtn" class="glassBtn thirdPartyBtn">Apple</button>
+                    <button id="metaBtn" class="glassBtn thirdPartyBtn">Meta</button>
+                    <button id="discordBtn" class="glassBtn thirdPartyBtn">Discord</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/login.js" defer></script>
+</body>
+</html>

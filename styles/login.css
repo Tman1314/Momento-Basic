@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#323d51, #4e416f, #754697, #9c5886, #c27450);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    color: white;
+    text-align: center;
+}
+
+#top p {
+    margin-top: 0;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#email {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.glassBtn {
+    display: inline-block;
+    padding: 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.glassBtn:hover {
+    background-color: rgba(198, 114, 231, 0.2);
+}
+
+#thirdPartyLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.thirdPartyBtn {
+    width: 45%;
+    margin: 5px 5px;
+    border-radius: 25px;
+}
