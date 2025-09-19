@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(/media/background_img.jpg) no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ----- Header ----- */
+
+#header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#header button {
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 12px;
+    padding: 12px 14px;
+    min-width: 44px;
+    min-height: 44px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5%;
+    top: 16px;
+}
+
+#header ~ hr {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    #header h1 {
+        margin-left: 20px;
+    }
+}
+/* ----- End Header ----- */
+
+hr {
+    width: 90%;
+    margin: 12px 0 0;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
+#alarmVideoInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#videoDate {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#videoTime {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#videoTitle {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#alarmVideo {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+    height: auto;
+}
+
+#videoSenderLabel {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: flex-start;
+
+}
+
+.alarmProfilePicContainer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px 10px;
+}
+
+.userProfilePic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#videoSenderInfo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

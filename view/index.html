@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Video Alarm - View Alarm</title>
+    <link href="./view.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="alarmContainer">
+            <div id="header">
+                <button id="backBtn">&lt;</button>
+                <h1>View Alarm</h1>
+            </div>
+            <hr>
+            <div id="body">
+                <div id="alarmContainer" class="container">
+                <div id="alarmVideoInfoContainer">
+                    <div id="videoDate">Tuesday Sept 16, 2025</div>
+                    <div id="videoTime">07:00 AM</div>
+                    <div id="videoTitle">Morning Motivation</div>
+                </div>
+                <div id="videoContainer">
+                    <video id="alarmVideo" controls>
+                        <source src="../media/sample_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="alarmVideoSenderContainer">
+                    <div id="videoSenderLabel">Alarm From:</div>
+                    <div id="videoSenderInfo">
+                        <div class="alarmProfilePicContainer">
+                            <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg"
+                                alt="User Picture" />
+                        </div>
+                        <p>Mom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./view.js" defer></script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 const dateText = document.getElementById("dateText");
 const recentAlarmsDates = document.querySelectorAll(".recentAlarmDate");
 const currentAlarmInfoArray = document.querySelectorAll(".currentAlarm .alarmInfo");
+const recentAlarmInfoArray = document.querySelectorAll(".recentAlarm .alarmInfo");
 const fabOptions = document.querySelectorAll(".fabOption");
 
 const date = new Date();
@@ -19,6 +20,12 @@ recentAlarmsDates.forEach(element => {
 currentAlarmInfoArray.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = '/manage';
+    });
+});
+
+recentAlarmInfoArray.forEach(element => {
+    element.addEventListener('click', () => {
+        window.location.href = '/view';
     });
 });
 
