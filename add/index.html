@@ -21,13 +21,13 @@
                     <div id="alarmInfoContainer">
                         <div id="alarmTitle">
                             <h2>Alarm Title</h2>
-                            <input type="text" placeholder="Morning Alarm">
+                            <input id="alarmTitleInput" type="text" placeholder="Morning Alarm">
                         </div>
                         <div id="alarmDateTime">
                             <h2>Alarm Date & Time</h2>
-                            <input type="datetime-local">
+                            <input id="alarmDateTimeInput" type="datetime-local">
                         </div>
-                        <div id="radio-group">
+                        <div class="radio-group">
                             <label for="repeatNone"><input type="radio" id="repeatNone" name="repeat" checked>Don't Repeat</label>
                             <label for="repeatDaily"><input type="radio" id="repeatDaily" name="repeat">Daily</label>
                             <label for="repeatWeekly"><input type="radio" id="repeatWeekly" name="repeat">Weekly</label>
@@ -37,19 +37,10 @@
                     </div>
                 </div>
                 <div id="alarmSenderInfo" class="container">
-                        <h2>Uploaded Momento</h2>
+                        <h2>Allow Momentos on Alarm</h2>
                     <hr>
-                    <div id="senderInfo">
-                        <div id="senderProfilePic">
-                            ?
-                        </div>
-                        <div id="senderName">
-                            <p>Open Slot</p>
-                        </div>
-                    </div>
-                    <a href="#">Invite Someone</a>
                     <div id="alarmAllowMomentoSetting">
-                        <div id="momentoSettingText">Alarm Allows Momentos</div>
+                        <div id="momentoSettingText">When enabled, allows contacts to send a video for your alarm.</div>
                         <label class="switch">
                             <input type="checkbox" checked>
                             <span class="slider round"></span>
@@ -62,7 +53,7 @@
                         <p>One of these videos will play if you don't have a momento on your alarm.</p>
                     </div>
                     <hr>
-                    <div id="radio-group">
+                    <div class="radio-group">
                         <label for="receivedVideos"><input type="radio" id="receivedVideos" name="fallbackVideos" checked>Received Videos</label>
                         <label for="yourVideos"><input type="radio" id="yourVideos" name="fallbackVideos">Your Videos</label>
                         <label for="defaultVideos"><input type="radio" id="defaultVideos" name="fallbackVideos">Default Videos</label>
