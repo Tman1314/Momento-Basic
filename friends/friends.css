@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(/media/background_img.jpg) no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+/* ----- Header ----- */
+#header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#header button {
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 12px;
+    padding: 12px 14px;
+    min-width: 44px;
+    min-height: 44px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5%;
+    top: 16px;
+}
+
+#header ~ hr {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    #header h1 {
+        margin-left: 20px;
+    }
+}
+/* ----- End Header ----- */
+
+hr {
+    width: 90%;
+    margin: 12px 0 0;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#searchInput {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    border-right-width: 0;
+    float: left;
+}
+
+#searchBtn {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    border-left-width: 0;
+    cursor: pointer;
+}
+
+.profilePicContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px 10px;
+}
+
+.userProfilePic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#searchContainer {
+    margin: 20px;
+}
+
+.friendInfoContainer {
+    flex-direction: row;
+    width: 50vw;
+    cursor: pointer;
+}
+
+.friendInfoContainer p {
+    padding-left: 30px;
+}
+
+.friendNickname {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.friendName {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+/* ----- Media Styles ----- */
+
+@media (max-width: 600px) {
+    .friendInfoContainer {
+        width: 90vw;
+    }
+
+    #searchInput {
+        width: 80%;
+    }
+
+    .friendNickname {
+        font-size: 2rem;
+    }
+
+    .friendName {
+        font-size: 1rem;
+    }
+}
