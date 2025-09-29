@@ -125,7 +125,7 @@ hr {
 }
 
 #searchContainer {
-    margin: 20px;
+    margin: 20px 20px 40px 20px;
 }
 
 .friendInfoContainer {
@@ -149,6 +149,123 @@ hr {
     color: rgba(255, 255, 255, 0.6)
 }
 
+#dateHeader {
+    width: 50vw;
+    height: 10vh;
+}
+
+.headerText {
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+}
+
+#dateSelector {
+    font-size: 1.5rem;
+}
+
+
+
+.calNavBtn {
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 15px;
+    padding: 5px 5px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#alarmsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding: 10px 0;
+}
+
+.alarm {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
+.alarmInfo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.divider {
+    height: 6rem;
+    width: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 5px;
+}
+
+.alarmDetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 1.75rem;
+}
+
+.alarmTime {
+    padding-right: 5px;
+}
+
+#recipient {
+    margin-bottom: 0;
+}
+
+#alarmInfoContainer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+#alarmTitle {
+    margin-top: 0;
+}
+
+#alarmUploadLabel {
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#recordIconBackground {
+    background-color: black;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#recordIcon {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 100%;
+}
+
 /* ----- Media Styles ----- */
 
 @media (max-width: 600px) {
@@ -166,5 +283,30 @@ hr {
 
     .friendName {
         font-size: 1rem;
+    }
+
+    #alarmsContainer {
+        width: 90vw;
+    }
+
+    .alarmTime {
+        width: 25vw;
+    }
+
+    #dateHeader {
+        width: 90vw;
+    }
+
+    .headerText {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+    }
+
+    #dateSelector {
+        font-size: 1.25rem;
+    }
+
+    .alarm {
+        width: 90vw;
     }
 }
