@@ -131,7 +131,6 @@ hr {
 .friendInfoContainer {
     flex-direction: row;
     width: 50vw;
-    cursor: pointer;
 }
 
 .friendInfoContainer p {
@@ -147,6 +146,27 @@ hr {
     font-size: 1.5rem;
     margin-top: 0;
     color: rgba(255, 255, 255, 0.6)
+}
+
+#addFriendBtnContainer {
+    margin-top: 20px;
+}
+
+.glassBtn {
+    display: inline-block;
+    padding: 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.glassBtn:hover {
+    background-color: rgba(198, 114, 231, 0.2);
 }
 
 /* ----- Media Styles ----- */
