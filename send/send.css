@@ -163,8 +163,6 @@ hr {
     font-size: 1.5rem;
 }
 
-
-
 .calNavBtn {
     background-color: rgba(198, 114, 231, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -246,6 +244,7 @@ hr {
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
 }
 
 #recordIconBackground {
@@ -264,6 +263,33 @@ hr {
     height: 40px;
     background-color: red;
     border-radius: 100%;
+}
+
+#alarmMessage {
+    width: 60vw;
+}
+
+#alarmMessageInput {
+    width: 50vw;
+    height: 10vh;
+    max-width: 90%;
+}
+
+.glassBtn {
+    display: inline-block;
+    padding: 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.glassBtn:hover {
+    background-color: rgba(198, 114, 231, 0.2);
 }
 
 /* ----- Media Styles ----- */
@@ -308,5 +334,13 @@ hr {
 
     .alarm {
         width: 90vw;
+    }
+
+    #alarmMessage {
+        width: 90vw;
+    }
+
+    #alarmMessageInput {
+        width: 90%;
     }
 }

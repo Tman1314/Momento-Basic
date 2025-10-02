@@ -1,35 +1,4 @@
-const backBtn = document.getElementById("backBtn");
-const friendListOptions = document.querySelectorAll(".friendInfoContainer");
-const pageBody = document.getElementById("body");
-const headerTitle = document.querySelector("#header h1");
-let page = "main";
-
-backBtn.addEventListener("click", () => {
-    if (page === "main") {
-        window.location.href = "/home";
-    } else if (page === "alarms") {
-        pageBody.innerHTML = mainPage;
-        page = "main";
-        headerTitle.textContent = "Choose Friend";
-    } else {
-        pageBody.innerHTML = addAlarmPage;
-        page = "alarms";
-        headerTitle.textContent = "Mom's Alarms";
-    }
-});
-
-friendListOptions.forEach(el => {
-    el.addEventListener("click", () => {
-        pageBody.innerHTML = alarmsPage;
-        page = "alarms";
-        headerTitle.textContent = "Mom's Alarms";
-    })
-});
-
-
-
-
-
+// Page content templates
 const mainPage = `
 <div id="searchContainer">
     <input id="searchInput" type="text" placeholder="Search for Friend..." />
@@ -135,6 +104,96 @@ const alarmsPage = `
 </div>
 `;
 
-const addAlarmPage = `
-
+const sendAlarmPage = `
+<div id="alarmInfoContainer">
+    <div class="alarm">
+        <div class="alarmInfo">
+            <div class="alarmTime">
+                <h3>07:00 AM</h3>
+            </div>
+            <div class="divider"></div>
+            <div class="alarmDetails">
+                <p id="recipient">For: Mom</p>
+                <p id="alarmTitle">Wake Up</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="alarmVideo" class="container">
+    <label for="alarmFile" id="alarmUploadLabel">
+        <div id="recordIconBackground"><div id="recordIcon"></div></div>
+        Tap to start recording or choose a video file
+    </label>
+    <input id="alarmFile" class="hidden" type="file" accept="video/*" />
+</div>
+<p id="messageTitle">Add a Message (Optional)</p>
+<div id="alarmMessage" class="container">
+    <textarea id="alarmMessageInput" placeholder="Share a thought with your friend."></textarea>
+</div>
+<div id="sendBtnContainer">
+    <button class="glassBtn">Send Alarm</button>
+</div>
 `
+
+const backBtn = document.getElementById("backBtn");
+const pageBody = document.getElementById("body");
+const headerTitle = document.querySelector("#header h1");
+let page = "main";
+
+// Navigation configuration
+const pages = {
+    main: {
+        title: "Choose Friend",
+        content: mainPage,
+        back: () => window.location.href = "/home",
+        init: addFriendEvents
+    },
+    alarms: {
+        title: "Mom's Alarms",
+        content: alarmsPage,
+        back: "main",
+        init: addAlarmEvents
+    },
+    sendAlarm: {
+        title: "Send alarm",
+        content: sendAlarmPage,
+        back: "alarms",
+        init: null
+    }
+};
+
+// Navigate to a page
+const navigateTo = (pageName) => {
+    const pageConfig = pages[pageName];
+    pageBody.innerHTML = pageConfig.content;
+    page = pageName;
+    headerTitle.textContent = pageConfig.title;
+    if (pageConfig.init) pageConfig.init();
+};
+
+// Back button handler
+backBtn.addEventListener("click", () => {
+    const backTarget = pages[page].back;
+    if (typeof backTarget === "function") {
+        backTarget();
+    } else {
+        navigateTo(backTarget);
+    }
+});
+
+// Attach friend list events
+function addFriendEvents() {
+    document.querySelectorAll(".friendInfoContainer").forEach(el => {
+        el.addEventListener("click", () => navigateTo("alarms"));
+    });
+}
+
+// Attach alarm list events
+function addAlarmEvents() {
+    document.querySelectorAll(".alarm").forEach(el => {
+        el.addEventListener("click", () => navigateTo("sendAlarm"));
+    });
+}
+
+// Initialize
+addFriendEvents();
