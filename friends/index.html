@@ -18,19 +18,36 @@
         <div id="body">
             <div id="addFriendBtnContainer">
                 <button id="addFriendBtn" type="button" class="glassBtn">Add Friend</button>
+                <button id="editFriendsBtn" type="button" class="glassBtn">Edit Friends</button>
             </div>
             <div id="searchContainer">
-                <input id="searchInput" type="text" placeholder="Search for Friend..." />
-                <button id="searchBtn" type="button">?</button>
+                <input id="searchInput" type="text" placeholder="Search Friends List" />
+                <button id="searchBtn" type="button">
+                    <img src="../media/magnifying-glass-solid-full.svg" width="22" height="auto" />
+                </button>
             </div>
             <div class="container friendInfoContainer">
-                <div class="profilePicContainer"><img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg" /></div>
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="profilePicContainer">
+                    <img class="userProfilePic" src="../media/profile-pics/sarah_mom_profile_pic.jpg" />
+                </div>
                 <div class="friendNameContainer">
                     <p class="friendNickname">Mom</p>
                     <p class="friendName">Charlotte Dupree</p>
                 </div>
             </div>
             <div class="container friendInfoContainer">
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="profilePicContainer">
                     <img class="userProfilePic" src="../media/profile-pics/alex_profile_pic.jpg" />
                 </div>
@@ -40,6 +57,12 @@
                 </div>
             </div>
             <div class="container friendInfoContainer">
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="profilePicContainer">
                     <img class="userProfilePic" src="../media/profile-pics/jaime_profile_pic.jpg" />
                 </div>
@@ -49,6 +72,12 @@
                 </div>
             </div>
             <div class="container friendInfoContainer">
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="profilePicContainer">
                     <img class="userProfilePic" src="../media/profile-pics/sarah_dad_profile_pic.jpg" />
                 </div>
@@ -58,6 +87,12 @@
                 </div>
             </div>
             <div class="container friendInfoContainer">
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="profilePicContainer">
                     <img class="userProfilePic" src="../media/profile-pics/katie_profile_pic.jpg" />
                 </div>
@@ -67,6 +102,12 @@
                 </div>
             </div>
             <div class="container friendInfoContainer">
+                <div class="hidden friendSelectContainer">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="profilePicContainer">
                     <img class="userProfilePic" src="../media/profile-pics/ryan_profile_pic.jpg" />
                 </div>
@@ -76,6 +117,18 @@
                 </div>
             </div>
         </div>
+        <dialog id="addFriendDialog" closedby="any">
+            <div id="dialogHeader">
+                <h1>Add Friend</h1>
+            </div>
+            <div id="dialogBody">
+                <p>
+                    This dialog will allow you to add friends from any social media you may have, 
+                    or from the contacts in your phone.
+                </p>
+                <button id="closeDialogBtn" class="glassBtn">Close</button>
+            </div>
+        </dialog>
     </div>
 
     <script src="./friends.js" defer></script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Video Alarm - Settings</title>
+    <link href="./settings.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="header">
+            <button id="backBtn">&lt;</button>
+            <h1>Settings</h1>
+        </div>
+        <hr>
+        <div id="body">
+            <div id="settingsContainer" class="container">
+                <div id="changeEmailContainer" class="settingContainer">
+                    <label>Change Email Adress</label>
+                    <input type="email" />
+                </div>
+                <div id="changeBackgroundContainer" class="settingContainer">
+                    <label>Change Background Image</label>
+                    <input type="file" />
+                </div>
+                <div id="changeThemeContainer" class="settingContainer">
+                    <label>Change Theme</label>
+                    <select>
+                        <option value="default">Default</option>
+                        <option value="sunny">Sunny</option>
+                        <option value="night">Night</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./settings.js" defer></script>
+</body>
+
+</html>

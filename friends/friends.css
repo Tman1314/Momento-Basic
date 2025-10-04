@@ -1,3 +1,8 @@
+::backdrop {
+    background-image: linear-gradient(#323d51, #4e416f, #754697, #9c5886, #c27450);
+    opacity: 0.75;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +13,10 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body:has(dialog:open) {
+    overflow: hidden;
 }
 
 .hidden {
@@ -22,6 +31,68 @@ body {
     width: 100%;
     color: white;
 }
+
+/* ----Checkbox slider CSS---- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgba(198, 114, 231, 0.8);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px rgba(198, 114, 231, 0.8);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* -------------------------- */
 
 /* ----- Header ----- */
 #header {
@@ -84,7 +155,14 @@ hr {
     margin: 10px 0;
 }
 
+#searchContainer {
+    display: flex;
+    margin: 20px;
+    width: 30vw;
+}
+
 #searchInput {
+    display: inline-block;
     font-size: 1.5rem;
     padding: 5px 10px;
     border: 1px solid white;
@@ -93,10 +171,12 @@ hr {
     color: white;
     text-align: center;
     border-right-width: 0;
-    float: left;
+    width: 75%;
+    margin: 0;
 }
 
 #searchBtn {
+    display: inline-block;
     font-size: 1.5rem;
     padding: 5px 10px;
     border: 1px solid white;
@@ -106,6 +186,11 @@ hr {
     text-align: center;
     border-left-width: 0;
     cursor: pointer;
+    margin: 0;
+}
+#searchBtn img {
+    vertical-align: middle;
+    filter: invert();
 }
 
 .profilePicContainer {
@@ -124,13 +209,9 @@ hr {
     object-fit: cover;
 }
 
-#searchContainer {
-    margin: 20px;
-}
-
 .friendInfoContainer {
     flex-direction: row;
-    width: 50vw;
+    width: 60vw;
 }
 
 .friendInfoContainer p {
@@ -163,10 +244,33 @@ hr {
     backdrop-filter: blur(30px);
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .glassBtn:hover {
     background-color: rgba(198, 114, 231, 0.2);
+}
+
+#addFriendDialog {
+    background-color: rgba(198, 114, 231, 0.75);
+    border: none !important;
+    border-radius: 30px;
+    width: 50vw;
+    padding: 0;
+}
+
+#dialogHeader {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(114, 68, 173, 0.9);
+}
+
+#dialogBody {
+    padding: 20px;
+}
+
+#dialogBody p {
+    font-size: 1.5rem;
 }
 
 /* ----- Media Styles ----- */
@@ -176,8 +280,8 @@ hr {
         width: 90vw;
     }
 
-    #searchInput {
-        width: 80%;
+    #searchContainer {
+        width: 100vw;
     }
 
     .friendNickname {
@@ -186,5 +290,9 @@ hr {
 
     .friendName {
         font-size: 1rem;
+    }
+
+    #addFriendDialog {
+        width: 90vw;
     }
 }

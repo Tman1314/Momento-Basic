@@ -140,7 +140,6 @@ const pageBody = document.getElementById("body");
 const headerTitle = document.querySelector("#header h1");
 let page = "main";
 
-// Navigation configuration
 const pages = {
     main: {
         title: "Choose Friend",
@@ -162,7 +161,6 @@ const pages = {
     }
 };
 
-// Navigate to a page
 const navigateTo = (pageName) => {
     const pageConfig = pages[pageName];
     pageBody.innerHTML = pageConfig.content;
@@ -171,7 +169,6 @@ const navigateTo = (pageName) => {
     if (pageConfig.init) pageConfig.init();
 };
 
-// Back button handler
 backBtn.addEventListener("click", () => {
     const backTarget = pages[page].back;
     if (typeof backTarget === "function") {
@@ -181,19 +178,16 @@ backBtn.addEventListener("click", () => {
     }
 });
 
-// Attach friend list events
 function addFriendEvents() {
     document.querySelectorAll(".friendInfoContainer").forEach(el => {
         el.addEventListener("click", () => navigateTo("alarms"));
     });
 }
 
-// Attach alarm list events
 function addAlarmEvents() {
     document.querySelectorAll(".alarm").forEach(el => {
         el.addEventListener("click", () => navigateTo("sendAlarm"));
     });
 }
 
-// Initialize
 addFriendEvents();
