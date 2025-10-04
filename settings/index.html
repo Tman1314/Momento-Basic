@@ -18,20 +18,23 @@
         <div id="body">
             <div id="settingsContainer" class="container">
                 <div id="changeEmailContainer" class="settingContainer">
-                    <label>Change Email Adress</label>
-                    <input type="email" />
+                    <label for="changeEmailInput">Change Email Adress</label>
+                    <input id="changeEmailInput" type="email" />
                 </div>
                 <div id="changeBackgroundContainer" class="settingContainer">
-                    <label>Change Background Image</label>
-                    <input type="file" />
+                    <label for="backgroundImageInput">Change Background Image</label>
+                    <input id="backgroundImageInput" type="file" />
                 </div>
                 <div id="changeThemeContainer" class="settingContainer">
-                    <label>Change Theme</label>
-                    <select>
+                    <label for="themeSelect">Change Theme</label>
+                    <select id="themeSelect">
                         <option value="default">Default</option>
                         <option value="sunny">Sunny</option>
                         <option value="night">Night</option>
                     </select>
+                </div>
+                <div id="saveBtnContainer">
+                    <button id="saveChangesBtn" class="glassBtn" type="button">Save Changes</button>
                 </div>
             </div>
         </div>

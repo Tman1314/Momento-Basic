@@ -167,6 +167,62 @@ hr {
     align-items: center;
 }
 
+#changeEmailInput {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+#backgroundImageInput {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 90%;
+}
+
+#themeSelect {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+#themeSelect option {
+    background-color: rgba(54, 21, 68, 0.6);
+}
+
+#saveBtnContainer {
+    margin-top: 20px;
+}
+
+.glassBtn {
+    display: inline-block;
+    padding: 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(198, 114, 231, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.glassBtn:hover {
+    background-color: rgba(198, 114, 231, 0.2);
+}
+
 @media (max-width: 600px) {
     #settingsContainer {
         width: 90vw;
