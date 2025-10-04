@@ -87,6 +87,24 @@ input:checked+.slider:before {
     color: white;
 }
 
+.glassBtn {
+    display: inline-block;
+    padding: 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(198, 114, 231, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.glassBtn:hover {
+    background-color: rgba(198, 114, 231, 0.5);
+}
+
 /* ----- Header ----- */
 
 #header {
@@ -262,7 +280,7 @@ hr {
     }
 
     #alarmInfoContainer .radio-group label {
-        width: 42px;
+        width: 40px;
         height: 35px;
         font-size: 0.75rem;
     }
@@ -369,7 +387,7 @@ hr {
 
 @media (max-width: 600px) {
     .radio-group label {
-        width: 85px;
+        width: 80px;
         height: 50px;
     }
 
