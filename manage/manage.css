@@ -371,7 +371,7 @@ hr {
 
 @media (max-width: 600px) {
     #radio-group label {
-        width: 85px;
+        width: 80px;
         height: 50px;
     }
 
